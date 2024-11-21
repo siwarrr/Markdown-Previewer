@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #87baba; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-y: auto; 
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 80%;
+  max-width: 800px; 
+  margin: 10px auto;
+  border: 2px solid #2f6466; 
+  border-radius: 8px;
+  background-color: #afd4d4; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f6466; 
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 200px; 
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  resize: none;
+  outline: none;
+  background-color: #d8eeee;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-y: scroll; 
+  white-space: pre-wrap; 
+  box-sizing: border-box;
+}
+
+#preview {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff; 
+  font-family: Arial, sans-serif;
+  white-space: pre-wrap; 
+  overflow: auto; 
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333; 
+}
+
+/* Style for inline code blocks (<code>) */
+code {
+  background-color: #f4f4f4; 
+  color: #d63384; 
+  font-family: 'Courier New', Courier, monospace; 
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Style for multi-line code blocks (<pre><code>) */
+pre {
+  background-color: #1e1e1e; 
+  color: #dcdcdc; 
+  font-family: 'Courier New', Courier, monospace; 
+  padding: 15px;
+  border-radius: 5px; 
+  overflow-x: auto; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin: 10px 0; 
+}
+
+/* Adding a border for more distinction */
+pre code {
+  border-left: 4px solid #d63384; 
+  padding-left: 10px;
+}
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  textarea {
+    height: 150px; 
+  }
+
+  #preview {
+    padding: 15px;
   }
 }
